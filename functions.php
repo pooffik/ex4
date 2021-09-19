@@ -4,13 +4,6 @@ function connectDB() {
 global $mysql;
 $mysql=new mysqli("localhost","root","","ex4");
 }
-function adduser(){
-global $mysql;
-connectDB();
-$success=$mysql->query("INSERT INTO `users`(`username`,`snetwork`,`FirstEnterDate`,`LastEnterDate`)VALUES('Docker','odnoklassniki','19-02-19','21-03-13')") ;
-closeDB();
-return $success;
-}
 function filtrtable() {
     global $mysql;
     connectDB();
